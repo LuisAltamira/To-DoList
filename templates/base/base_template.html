@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    {% block css %}
+    {% endblock css %}
+        
+</head>
+<body class="bg-gradient-to-r from-[#022162] to-blue-500">
+    <!-- {% csrf_token %} -->
+    {% block body %}
+    {% endblock body %}
+    
+    {% block js %}
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        {% block extra_js %}
+        {% endblock extra_js %}
+    {% endblock js %}
+        
+</body>
+</html>

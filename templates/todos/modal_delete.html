@@ -1,0 +1,19 @@
+<div id="modal-delete"
+    class="fixed inset-0 z-10 overflow-hidden backdrop-blur-lg bg-black/20 flex items-center justify-center transition-transform duration-300 hidden">
+    <div
+        class="modal-container p-6 backdrop-blur-sm bg-white/90 w-11/12 sm:w-11/12 md:w-8/12 lg:w-6/12 rounded-md shadow-sm">
+        <h2 class="text-xl font-semibold mb-6">¿Deseas eliminar la siguiente tarea?</h2>
+        <span class="block text-sm font-medium text-gray-700 mb-2" id="task-name-delete"></span>
+        
+        <div class="flex justify-end id=" modal-actions">
+            <button class="hover:border-blue-100 text-white font-semibold py-2 px-4 rounded-md mr-2 bg-[#FF5845]"
+                data-uuid="uuid"
+                data-task-name="task name"
+                id="btn-delete"
+                onclick="handleClickDeleteTask()">Eliminar</button>
+            <button
+                class="border border-fuchsia-00 hover:border-blue-100 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors duration-300"
+                onclick="closeModalDelete()">Cancelar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% extends 'base/base_template.html' %}
+{% load static %}
+
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block body %}
+<div class="max-w-sm md:max-w-md xl:max-w-xl mx-auto">
+    <div class="flex-col justify-center mt-4 shadow-sm border-2 border-gray-200 p-4 rounded-lg shadow-sm bg-white">
+        <div class="flex items-center mb-4">
+            <h1 class="text-3xl font-semibold">To-Do List</h1>
+        </div>
+
+        <div>
+            <div class="relative flex items-center">
+                <input type="text" id="input-new-task" placeholder="Agregar Nueva tarea"
+                    class="rounded-full bg-[#EDEEF0] py-4 px-4 w-full focus:border focus:border-gray-300 focus:ring-0 focus:outline-none text-gray-500" />
+                <button type="button"
+                    class="rounded-full bg-[#FF5845] px-10 py-4 text-white absolute right-0 focus font-semibold"
+                    onclick="onSubmitTask()">Agregar</button>
+            </div>
+        </div>
+
+        <!-- Container Tasks -->
+        <div class="mt-10" id="container-tasks">
+
+        </div>
+        <!-- End Container Tasks -->
+
+    </div>
+</div>
+
+{% include 'todos/modal_update.html' %}
+{% include 'todos/modal_delete.html' %}
+
+{% endblock body %}
+
+
+
+{% block extra_js %}
+<script src="{% static 'components/Task.js' %}"></script>
+<script src="{% static 'components/ModalActions.js' %}"></script>
+<script src="{% static 'components/Toast.js' %}"></script>
+<script src="{% static 'todos/getTasks.js' %}"></script>
+<script src="{% static 'todos/updateTask.js' %}"></script>
+<script src="{% static 'todos/getTask.js' %}"></script>
+<script src="{% static 'todos/createTask.js' %}"></script>
+<script src="{% static 'todos/deleteTask.js' %}"></script>
+<script src="{% static 'todos/main.js' %}"></script>
+{% endblock extra_js %}
