@@ -25,7 +25,7 @@ La versión de python utilizada es: 3.10.12
 
 ## Documentacion del API
 
-podemos ver la documentación del API ya una vez que el proyecto se encuentre ejecución en las siguientes ligas:
+podemos ver la documentación del API ya una vez que el proyecto se encuentre en ejecución en las siguientes ligas:
 
 - http://localhost:8000/docs/
 - http://localhost:8000/redocs/
